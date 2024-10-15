@@ -1,0 +1,23 @@
+#required funcitons
+#return_movie
+#movie_list
+#title
+
+def return_movie(movie_list, title):
+    for movie in movie_list:
+        if movie[0] == title and not movie[3]:
+            movie[3] = True
+            return movie_list
+    return movie_list
+
+movie_list = [
+    ["The Matrix", "Sci-Fi", 1999, True],
+    ["The Godfather", "Crime", 1972, True],
+    ["Titanic", "Romance", 1997, False]
+]
+
+title = input("Enter movie title to return: ")
+return_movie(movie_list, title)
+
+print(title + " has been returned.")
+print(movie_list)
