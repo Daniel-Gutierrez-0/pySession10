@@ -1,36 +1,3 @@
-
-# Group 1: Add Movie Function
-def add_movie(movie_list, title, genre, year, available):
-    movie_list.append([title, genre, year, available])
-    return movie_list
-
-# Group 2: View Available Movies Function
-def view_available_movies(movie_list):
-    return [movie for movie in movie_list if movie[3] == True]
-
-# Group 3: Borrow Movie Function
-def borrow_movie(movie_list, title):
-    for movie in movie_list:
-        if movie[0] == title and movie[3]:
-            movie[3] = False
-            return movie_list
-    return movie_list
-
-# Group 4: Return Movie Function
-def return_movie(movie_list, title):
-    for movie in movie_list:
-        if movie[0] == title and not movie[3]:
-            movie[3] = True
-            return movie_list
-    return movie_list
-
-# Group 5: Search Movie Function
-def search_movie(movie_list, title):
-    for movie in movie_list:
-        if movie[0] == title:
-            return movie
-    return "Book not found!"
-
 # Group 6: Main Program Integration
 def main_menu(movie_list):
     while True:
